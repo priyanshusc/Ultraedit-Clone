@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise7</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+
+        body {
+            max-width: 1200px;
+            /* Set a logical width */
+            margin: 0 auto;
+            /* Center it horizontally */
+            font-family: "segoe ui";
+            /* scale: 1.05; */
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            background-color: rgb(255, 255, 255);
+            /* width: 50vw; */
+            padding: 16px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-sizing: border-box;
+        }
+
+        li {
+            margin-top: 2px;
+            position: relative;
+            left: 317px;
+        }
+
+        .arrow {
+            height: 11px;
+            position: relative;
+            top: 0px;
+        }
+
+        .logo {
+            height: 56px;
+            position: relative;
+            /* left: -15px; */
+            transform: translate(-20px, 3px)
+        }
+
+        .search {
+            position: relative;
+            left: -7px;
+            top: 2px;
+            height: 17px;
+        }
+
+        .help {
+            position: relative;
+            left: -15px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+            position: relative;
+            top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .reviews {
+            height: 30px;
+            display: flex;
+        }
+
+        .subheading {
+            font-size: 24px;
+            position: relative;
+            top: 96px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .button {
+            text-decoration: none;
+            font-size: 14px;
+            background-color: #00b6d1;
+            padding: 15px 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 108px;
+            margin: 20px auto;
+        }
+
+        .line {
+            display: inline;
+            display: flex;
+            align-items: baseline;
+            font-size: x-large;
+            position: relative;
+            top: 148px;
+            left: 125px;
+        }
+
+        .small {
+            display: inline;
+            font-size: 14px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .logo2 {
+            height: 65px;
+            position: relative;
+            top: 23px;
+        }
+
+        .grid {
+            position: relative;
+            top: 200px;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(4, 250px);
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background-color: beige;
+            font-weight: 700;
+            font-size: larger;
+            padding-top: 30px;
+            flex-direction: column;
+        }
+
+        .smalls {
+            font-size: small;
+            font-weight: 400;
+            padding-top: 20px;
+        }
+
+        .download {
+            text-decoration: none;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            margin: auto 0;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #5cb85c;
+            color: white;
+            padding: 8px 16px;
+        }
+
+        .code {
+            font-weight: 400;
+            font-size: 10px;
+            position: relative;
+            top: -38px;
+        }
+
+        .serialno {
+            font-size: 8px;
+            font-weight: 400;
+            position: relative;
+            top: -30px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 218px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer1 {
+            height: 720px;
+            width: 1349px;
+            background-color: #222;
+            margin-top: 200px;
+            position: relative;
+            left: -75px;
+        }
+
+        .footer2 {
+            background-color: white;
+            height: 650px;
+            width: 1349px;
+            display: grid;
+            grid-template-columns: 200px 220px 220px 200px 200px;
+            grid-template-rows: repeat(1, 500px);
+            gap: 46px;
+        }
+
+        .fmaterial {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .fheading {
+            transform: translate(262px, 203px);
+            font-size: x-large;
+            font-weight: 700;
+        }
+
+        .fsubheading {
+            transform: translate(262px, 215px);
+            width: 415px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: rgb(255, 255, 255);
+            transform: translate(158px, -10px);
+            width: 370px;
+            height: 280px;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .Subscribe {
+            margin-top: 37px;
+            font-size: x-large;
+            color: #00b6d1;
+        }
+
+        .email {
+            color: rgb(110, 110, 110);
+            margin-top: 24px;
+            font-size: 14px;
+        }
+
+        .enter {
+            position: relative;
+            width: 277px;
+            height: 48px;
+            border: 1px solid rgb(180, 180, 180);
+            top: 6px;
+        }
+
+        .signup {
+            border: 0;
+            padding: 10px 110px;
+            background-color: #00b6d1;
+            color: white;
+            transform: translateY(16px);
+            text-align: center;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .signup:hover {
+            cursor: pointer;
+            background-color: #008fa5;
+        }
+
+        .download:hover {
+            background-color: rgb(11, 134, 11);
+        }
+
+        .button:hover {
+            background-color: #008fa5;
+        }
+
+        .exe {
+            color: white;
+            font-size: x-large;
+            transform: translate(182px, 90px);
+        }
+
+        .exesub {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            transform: translate(183px, 93px);
+            line-height: 2.4;
+        }
+
+        a {
+            color: #00b6d1;
+            text-decoration: none;
+        }
+
+        .exe2 {
+            color: white;
+            font-size: x-large;
+            transform: translate(182px, 100px);
+        }
+
+        .exesub2 {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            transform: translate(183px, 112px);
+            line-height: 24.7px;
+        }
+
+        .subitem {
+            display: flex;
+            /* justify-content: flex-start; */
+            transform: translateY(50px);
+            font-weight: 700;
+            flex-direction: column;
+            line-height: 60px;
+        }
+
+        .list {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+            /* width: 20px; */
+        }
+
+        .enter2 {
+            width: 198px;
+            border-radius: 7px;
+            height: 42px;
+        }
+
+        .signup2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            width: 199px;
+            transform: translateY(17px);
+            padding: 11px 0px;
+            background-color: #00b6d1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .base {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 20px 0;
+            width: 189px;
+            display: flex;
+            flex-direction: column;
+            transform: translate(89px, -46px);
+        }
+
+        .copyright {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 20px 0;
+            width: 189px;
+        }
+
+        .signup2:hover{
+            background-color: #008fa5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <a href="https://www.ultraedit.com/"><img class="logo" src="unnamed.jpg" alt=""></a>
+            <li>Products <img class="arrow" src="down-arrow-svgrepo-com.svg" alt=""></li>
+            <li>For Business <img class="arrow" src="down-arrow-svgrepo-com.svg" alt=""></li>
+            <li>Resources <img class="arrow" src="down-arrow-svgrepo-com.svg" alt=""></li>
+            <li>Support <img class="arrow" src="down-arrow-svgrepo-com.svg" alt=""></li>
+            <li>Our Company <img class="arrow" src="down-arrow-svgrepo-com.svg" alt=""></li>
+            <li><img class="search" height="18px"
+                    src="https://img.pngfree.ai/png/V_n_y9KThjit/magnifying-glass-icon-for-text-and-interface-design_m_wm.png"
+                    alt=""></li>
+            <li><a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/"><img class="help"
+                        height="22px" class="imgg1"
+                        src="https://img.pngfree.ai/png/3FYPxrPVVNYq/chat-box-icon-for-dialogue-and-conversation_xs.png"
+                        alt=""></a></li>
+        </ul>
+    </nav>
+    <h1>
+        Download&nbsp; <strong>UltraEdit</strong>&nbsp;for Windows &nbsp;<a
+            href="https://www.g2.com/products/ultraedit/reviews"><img class="reviews" src="Reviews.png" alt=""></a>
+    </h1>
+    <div class="subheading">Download and try UltraEdit before you buy it! This download includes the full Windows
+        version of the text editor.</div>
+    <a href="https://www.ultraedit.com/downloads/uex-thank-you/" class="button">Download Mac or Linux version</a>
+    <div class="line"><img class="logo2" height="20px" src="ultraedit.png" alt="">&nbsp;&nbsp;Download UltraEdit
+        <div class="small">&nbsp;&nbsp;v2024.3 (released 2025-02-20) | Hotfix information</div>
+    </div>
+    <div class="grid">
+        <div class="item item1">
+            <div>English</div>
+            <div class="smalls">Angreji</div>
+            <a href="ue_german_64.exe" class="download down1">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item2">
+            <div>Deutsch</div>
+            <div class="smalls">German</div>
+            <a href="ue_german_64.exe" class="download down2">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item3">
+            <div>Italiano</div>
+            <div class="smalls">Italian</div>
+            <a href="ue_german_64.exe" class="download down3">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item4">
+            <div>Español</div>
+            <div class="smalls">Spanish</div>
+            <a href="ue_german_64.exe" class="download down4">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item5">
+            <div>français</div>
+            <div class="smalls">French</div>
+            <a href="ue_german_64.exe" class="download down5">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item6">
+            <div>Português brasileiro</div>
+            <div class="smalls">Brazilian Portuguese</div>
+            <a href="ue_german_64.exe" class="download down6">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item7">
+            <div>日本</div>
+            <div class="smalls">Japanese</div>
+            <a href="ue_german_64.exe" class="download down7">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item8">
+            <div>한국어</div>
+            <div class="smalls">Korean</div>
+            <a href="ue_german_64.exe" class="download down8">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item9">
+            <div>华语</div>
+            <div class="smalls">Chinese</div>
+            <a href="ue_german_64.exe" class="download down9">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+        <div class="item item10">
+            <div>華語</div>
+            <div class="smalls">Traditional Chinese</div>
+            <a href="ue_german_64.exe" class="download down10">Download 64-bit</a>
+            <div class="code">SHA256</div>
+            <div class="serialno">8229160C746CE6364F56DFF39CE083C064BF9A43A67C786976C6 3AF0EB8E6259</div>
+        </div>
+    </div>
+    <div class="footer1">
+        <div class="fmaterial">
+            <div class="fheading">Join the UltraEdit newsletter</div>
+            <div class="fsubheading">Sign up for our newsletter and receive emails for the latest news, blogs, and
+                special deals on UltraEdit.</div>
+        </div>
+        <div class="box">
+            <div class="Subscribe">Subscribe to our Emails</div>
+            <div class="email">Enter email address</div>
+            <input type="text" class="enter" name="email" placeholder="&nbsp;Enter email address" required>
+            <input type="submit" class="signup" value="Sign Up">
+        </div>
+        <div class="exe">EXE or MSI</div>
+        <div class="exesub">The EXE builds of our products are the preferred download for most of our users, running
+            Windows 10 and later. <br>We make MSI builds available for bulk or silent deployments (command line, GPO,
+            SCCM, etc.).<a href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/msi/">&nbsp;Get the
+                msi ultraedit installer.</a></div>
+        <div class="exe2">Free trial period</div>
+        <div class="exesub2">This application comes with a free, fully functional 30 day trial period. After the trial
+            period expires, you must <a href="">purchase a license</a> <br>to continue using it.</div>
+    </div>
+    <div class="footer2">
+        <div class="subitem">
+            <div>What's your language?</div>
+            <div class="list">Code editor (General)</div>
+            <div class="list">Text editor</div>
+            <div class="list">Hex/Binary</div>
+            <div class="list">HTML</div>
+            <div class="list">CSS</div>
+            <div class="list">Unix shell scripts</div>
+            <div class="list">PL/SQL</div>
+            <div class="list">EDI</div>
+            <div class="list">C++</div>
+            <div class="list">PHP</div>
+            <div class="list">XML</div>
+            <div class="list">Markdown</div>
+            <div class="list">SAS</div>
+            <div class="list">Visual Basic (VB)</div>
+        </div>
+        <div class="subitem">
+            <div>What do you need to do?</div>
+            <div class="list">Edit large text files</div>
+            <div class="list">Use secure and compliant software</div>
+            <div class="list">Work with unique languages and formats</div>
+            <div class="list">Edit hex and binary files</div>
+            <div class="list">Reformat XML/JSON files</div>
+            <div class="list">Massive find and replace operations</div>
+            <div class="list">Edit via columns/blocks</div>
+
+        </div>
+        <div class="subitem">
+            <div>What type of user are you?</div>
+            <div class="list">Programmer / Developer</div>
+            <div class="list">Web Developer</div>
+            <div class="list">Database Manager</div>
+            <div class="list">System Administrator</div>
+            <div class="list">Technical Writer</div>
+            <div class="list">Editor / Publisher</div>
+            <div class="list">Medical / Pharmaceutical</div>
+
+        </div>
+        <div class="subitem">
+            <div>General</div>
+            <div class="list">Contact</div>
+            <div class="list">License Agreement (EULA)</div>
+            <div class="list">End of Life Policy</div>
+            <div class="list">Libraries and Patents</div>
+            <div class="list">Information Policy</div>
+            <div class="list">Privacy Policy</div>
+            <div class="list">Uninstall Instructions</div>
+            <div class="list">Sitemap</div>
+            <div class="list">Legal</div>
+            <div class="list">Software Security</div>
+
+        </div>
+        <div class="subitem lastbox">
+            <div>Subscribe to Newsletter</div>
+            <div class="listt list">Get the latest news on new releases, event, and developments.</div>
+            <input type="text" class="enter enter2" name="email" placeholder="&nbsp;&nbsp;Enter email address...." required>
+            <input type="submit" class="signup2" value="subscribe">
+        </div>
+        <div class="base">
+            <img height:auto width=157px
+                src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            <div class="copyright">©2025 UltraEdit. All rights reserved</div>
+        </div>
+    </div>
+</body>
+
+</html>
