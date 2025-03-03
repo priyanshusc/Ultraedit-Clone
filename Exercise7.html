@@ -9,6 +9,7 @@
         /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
 
         body {
+            overflow-x: hidden;
             max-width: 1200px;
             /* Set a logical width */
             margin: 0 auto;
@@ -136,12 +137,23 @@
 
         .grid {
             position: relative;
+            margin: 0 auto;
             top: 200px;
             display: grid;
             grid-template-columns: repeat(3, 300px);
             grid-template-rows: repeat(4, 250px);
             gap: 30px;
             justify-content: center;
+        }
+
+        @media screen and (max-width:900px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 300px 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
 
         .item {
@@ -373,7 +385,7 @@
             width: 189px;
         }
 
-        .signup2:hover{
+        .signup2:hover {
             background-color: #008fa5;
             cursor: pointer;
         }
@@ -558,12 +570,13 @@
         <div class="subitem lastbox">
             <div>Subscribe to Newsletter</div>
             <div class="listt list">Get the latest news on new releases, event, and developments.</div>
-            <input type="text" class="enter enter2" name="email" placeholder="&nbsp;&nbsp;Enter email address...." required>
+            <input type="text" class="enter enter2" name="email" placeholder="&nbsp;&nbsp;Enter email address...."
+                required>
             <input type="submit" class="signup2" value="subscribe">
         </div>
         <div class="base">
-            <img height:auto width=157px
-                src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="">
+            <img height:auto width=157px src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp"
+                alt="">
             <div class="copyright">©2025 UltraEdit. All rights reserved</div>
         </div>
     </div>
